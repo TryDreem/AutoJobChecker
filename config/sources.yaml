@@ -1,0 +1,285 @@
+# ============================================================================
+#  Каталог источников AutoChecker
+# ----------------------------------------------------------------------------
+#  Этот файл — стартовый список, а не окончательный. При запуске он заливается
+#  в базу; уже существующие записи не перезаписываются, поэтому правки, сделанные
+#  из бота (включить, выключить, добавить), не теряются.
+#
+#  ВАЖНО про Telegram-каналы: список собран из открытых подборок и часть каналов
+#  могла переехать или закрыться. Не пытайся выверять его руками — нажми в боте
+#  «📡 Источники» → «🩺 Проверить все». Бот резолвит каждый канал через твой
+#  аккаунт, подставит настоящее название и число подписчиков, а те, до которых
+#  не достучится трижды, отключит сам. Кнопка «🔎 Найти новые» ищет живые каналы
+#  по ключевым словам прямо в Telegram — это надёжнее любого готового списка.
+#
+#  priority: 1–10, влияет на итоговую оценку постов (5 — нейтрально).
+#  enabled:  false — источник заведён, но не опрашивается.
+# ============================================================================
+
+telegram:
+  # --- Python: основное направление ---------------------------------------
+  - channel: "@job_python"
+    title: "Python Job | Вакансии | Стажировки"
+    tags: [python, jobs, internship]
+    priority: 9
+
+  - channel: "@p_rabota"
+    title: "Python Вакансии Junior/Middle"
+    tags: [python, junior]
+    priority: 9
+
+  - channel: "@pythonpythonjobs"
+    title: "Python — вакансии и стажировки"
+    tags: [python, internship]
+    priority: 8
+
+  - channel: "@python_hh"
+    title: "Python вакансии"
+    tags: [python]
+    priority: 7
+    enabled: false   # юзернейм свободен — канал переехал или удалён
+
+  - channel: "@RabotaPython"
+    title: "Python Senior/Lead"
+    tags: [python, senior]
+    # Senior-позиции ниже по умолчанию, но иногда там попадаются и middle.
+    priority: 3
+
+  # --- Общие IT-вакансии ---------------------------------------------------
+  - channel: "@it_rab"
+    title: "IT вакансии — каталог"
+    tags: [it, jobs]
+    priority: 6
+
+  - channel: "@distantsiya"
+    title: "Дистанция — удалённая работа"
+    tags: [remote, it]
+    priority: 7
+
+  - channel: "@forallmyfriends"
+    title: "Работа для программистов"
+    tags: [it, jobs]
+    priority: 6
+    enabled: false   # канал не существует
+
+  - channel: "@devjobs"
+    title: "Dev Jobs"
+    tags: [it, jobs]
+    priority: 6
+
+  - channel: "@it_juniors"
+    title: "IT Junior — старт в профессии"
+    tags: [junior, internship]
+    priority: 8
+
+  # --- JavaScript и fullstack ---------------------------------------------
+  - channel: "@jsjobbit"
+    title: "JS Job"
+    tags: [javascript, frontend]
+    priority: 7
+    enabled: false   # юзернейм свободен
+
+  - channel: "@nodejs_jobs"
+    title: "Node.js Jobs"
+    tags: [javascript, backend]
+    priority: 7
+
+  # --- Польша и релокация --------------------------------------------------
+  - channel: "@IT_job_Poland"
+    title: "IT вакансии в Польше"
+    tags: [poland, relocation]
+    priority: 9
+
+  - channel: "@ITworkinPoland"
+    title: "IT relocation to Poland"
+    tags: [poland, relocation]
+    priority: 8
+
+  - channel: "@pol_relocation"
+    title: "Poland Relocation"
+    tags: [poland, relocation]
+    priority: 7
+
+  - channel: "@relocateme"
+    title: "Relocate.Me — работа за рубежом"
+    tags: [relocation, remote]
+    priority: 6
+
+  - channel: "@jobs_abroad"
+    title: "Работа за границей"
+    tags: [relocation]
+    priority: 5
+
+  # --- Фриланс и разовые заказы -------------------------------------------
+  - channel: "@freelansim_ru"
+    title: "Хабр Фриланс"
+    tags: [freelance, gigs]
+    priority: 8
+
+  - channel: "@freelance_ru"
+    title: "Фриланс — заказы"
+    tags: [freelance, gigs]
+    priority: 6
+    enabled: false   # канал не существует
+
+  - channel: "@kwork_ru"
+    title: "Kwork — заказы"
+    tags: [freelance, gigs]
+    priority: 5
+    enabled: false   # канал не существует
+
+  # Найдены живым поиском по Telegram и проверены на существование.
+  # Приоритет расставлен по профилю: заказы на код — выше, смежные
+  # направления (дизайн, монтаж) — ниже, они нужны, чтобы фильтру
+  # «🧩 Направления заказов» было что отсеивать.
+
+  # --- Заказы на разработку: самое релевантное --------------------------
+  - channel: "@freelance_dev_work"
+    title: "Разработка и IT — Kwork заказы"
+    tags: [freelance, gigs, dev]
+    priority: 9
+
+  - channel: "@freelancerai_it"
+    title: "Программирование & IT | Заказы"
+    tags: [freelance, gigs, dev]
+    priority: 9
+
+  - channel: "@job_programming_apps_chatgpt_n8n"
+    title: "Работа и заказы: программирование, скрипты"
+    tags: [freelance, gigs, dev]
+    priority: 8
+
+  - channel: "@Tildalancer"
+    title: "Tildalancer — заказы на Тильде"
+    tags: [freelance, gigs, web]
+    priority: 5
+
+  # --- Общие фриланс-биржи ------------------------------------------------
+  - channel: "@Freelanceroff"
+    title: "Freelancer | Find Jobs & Projects"
+    tags: [freelance, gigs]
+    priority: 7
+
+  - channel: "@kadrof_work"
+    title: "Вакансии для фрилансеров, удалённая работа"
+    tags: [freelance, gigs, remote]
+    priority: 7
+
+  - channel: "@workzillacom"
+    title: "Workzilla — биржа фриланса"
+    tags: [freelance, gigs]
+    priority: 6
+
+  - channel: "@freelance_zakazy"
+    title: "Фриланс заказы и вакансии — Kwork"
+    tags: [freelance, gigs]
+    priority: 6
+
+  - channel: "@birjafreelance"
+    title: "Биржа вакансий фриланса"
+    tags: [freelance, gigs]
+    priority: 5
+
+  - channel: "@udalenka_chat_vakansii"
+    title: "Биржа фриланса"
+    tags: [freelance, gigs]
+    priority: 5
+
+  - channel: "@remote_work20"
+    title: "Wooton — удалённая работа и фриланс"
+    tags: [freelance, gigs, remote]
+    priority: 5
+
+  # Отдельно ценен географией: Украина / Польша / ЕС.
+  - channel: "@onlinejobsfr"
+    title: "Freelance Jobs | UA / PL / EU"
+    tags: [freelance, gigs, poland]
+    priority: 7
+
+  # --- Смежные направления: нужны для работы фильтра категорий -----------
+  - channel: "@designer_jobs"
+    title: "Вакансии и заказы на дизайн"
+    tags: [freelance, gigs, design]
+    priority: 3
+
+  - channel: "@SearchEditorr"
+    title: "Видеомонтаж — фриланс заказы"
+    tags: [freelance, gigs, video]
+    priority: 3
+
+# ============================================================================
+#  Биржи с открытым API. Работают сразу, ключей не требуют.
+# ============================================================================
+jobboards:
+  - provider: remoteok
+    title: "RemoteOK"
+    tags: [remote, worldwide]
+    priority: 7
+
+  - provider: remotive
+    title: "Remotive"
+    tags: [remote, worldwide]
+    priority: 7
+    options:
+      queries: [python, backend, javascript, fullstack, django, fastapi]
+      limit: 40
+
+  - provider: arbeitnow
+    title: "Arbeitnow — Европа"
+    tags: [europe, poland]
+    priority: 8
+    options:
+      pages: 3
+
+  - provider: jobicy
+    title: "Jobicy"
+    tags: [remote, worldwide]
+    priority: 6
+    options:
+      tags: [python, backend, javascript, full-stack]
+      count: 50
+
+  - provider: himalayas
+    title: "Himalayas"
+    tags: [remote, worldwide]
+    priority: 6
+    options:
+      limit: 100
+      pages: 2
+
+  # Upwork: публичные RSS отключены с августа 2024, работаем через официальный
+  # GraphQL API. Ключ бесплатный для личного использования — заявка подаётся в
+  # API Center на upwork.com, рассмотрение около недели.
+  # Как появятся ключи: впиши их в .env и включи источник в боте
+  # («📡 Источники» → тап по строке).
+  - provider: upwork
+    title: "Upwork"
+    tags: [freelance, gigs, dev]
+    priority: 9
+    enabled: false
+    options:
+      queries:
+        - python
+        - django
+        - fastapi
+        - python automation
+        - telegram bot
+        - web scraping python
+        - backend api
+        - javascript nodejs
+      limit: 40
+
+# ============================================================================
+#  RSS/Atom-ленты. Сюда добавляется любая площадка со своим фидом —
+#  достаточно вписать URL, отдельный код не нужен.
+# ============================================================================
+rss:
+  - url: "https://weworkremotely.com/categories/remote-programming-jobs.rss"
+    title: "We Work Remotely — Programming"
+    tags: [remote, worldwide]
+    priority: 6
+
+  - url: "https://weworkremotely.com/categories/remote-back-end-programming-jobs.rss"
+    title: "We Work Remotely — Backend"
+    tags: [remote, backend]
+    priority: 7

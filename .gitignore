@@ -1,0 +1,29 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Секреты и сессии — НИКОГДА не коммитить.
+# .session — это полный доступ к твоему Telegram-аккаунту.
+.env
+.env.*
+!.env.example
+*.session
+*.session-journal
+
+# Данные
+data/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.log
+
+.idea/
+.vscode/
+.DS_Store

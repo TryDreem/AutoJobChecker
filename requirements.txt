@@ -1,0 +1,30 @@
+# Telegram Bot API (интерфейс бота)
+aiogram>=3.15,<4.0
+
+# Telegram MTProto (парсинг каналов и чатов от имени аккаунта)
+telethon>=1.44,<2.0
+cryptg>=0.4          # ускоряет шифрование Telethon в разы
+
+# Хранилище
+SQLAlchemy>=2.0,<3.0
+aiosqlite>=0.20
+greenlet>=3.0          # нужен асинхронному движку SQLAlchemy
+
+# Конфигурация
+pydantic>=2.9
+pydantic-settings>=2.5
+python-dotenv>=1.0
+PyYAML>=6.0
+
+# Планировщик фоновых задач
+APScheduler>=3.10,<4.0
+
+# HTTP-клиент для источников-бирж
+httpx>=0.27
+
+# Разбор RSS/Atom-лент (биржи и job-борды)
+feedparser>=6.0
+
+# Опционально: LLM-классификатор пограничных постов (Groq, бесплатно).
+# Без ключа GROQ_API_KEY бот работает на правилах.
+groq>=0.11
