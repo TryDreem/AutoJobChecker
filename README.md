@@ -34,6 +34,7 @@ AutoJobChecker is not limited to Telegram.
 |---|---|---|
 | Telegram channels | public job and freelance channels | Uses Telethon with your account session |
 | Job websites with APIs | RemoteOK, Remotive, Arbeitnow, Jobicy, Himalayas | Works without scraping keys |
+| Scrapy website parsers | the:protocol, Pracuj.pl | Parses SSR job pages when available |
 | RSS/Atom feeds | We Work Remotely and any compatible feed | Add URLs in `config/sources.yaml` |
 | Freelance platforms | Upwork | Optional, uses official API credentials |
 | Custom websites | your own parser/source class | Implement `BaseSource` and yield `RawPost` |
@@ -41,6 +42,8 @@ AutoJobChecker is not limited to Telegram.
 ## Core Features
 
 - Aggregates jobs, gigs, internships, and freelance tasks from many sources.
+- Includes Scrapy-based parsers for Polish job websites such as the:protocol
+  and Pracuj.pl.
 - Extracts salary ranges and normalizes monthly compensation when possible.
 - Detects Python, backend, frontend, full-stack, DevOps, AI, automation, and
   other stack signals.

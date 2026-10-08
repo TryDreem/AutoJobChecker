@@ -247,6 +247,31 @@ jobboards:
       limit: 100
       pages: 2
 
+  # Scrapy-парсеры сайтов Grupa Pracuj. Если сайт отдаст Cloudflare challenge,
+  # источник не ломает обход, а запишет понятную ошибку в статусе источника.
+  - provider: theprotocol
+    title: "the:protocol"
+    tags: [poland, it, dev]
+    priority: 9
+    options:
+      queries: [python, django, fastapi, backend, javascript, fullstack]
+      limit: 50
+      pages: 1
+
+  - provider: pracuj
+    title: "Pracuj.pl"
+    tags: [poland, jobs]
+    priority: 8
+    options:
+      queries:
+        - python developer
+        - django
+        - fastapi
+        - backend python
+        - javascript developer
+      limit: 50
+      pages: 2
+
   # Upwork: публичные RSS отключены с августа 2024, работаем через официальный
   # GraphQL API. Ключ бесплатный для личного использования — заявка подаётся в
   # API Center на upwork.com, рассмотрение около недели.

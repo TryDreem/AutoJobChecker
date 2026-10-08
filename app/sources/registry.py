@@ -50,6 +50,6 @@ def load_all() -> None:
 
     Новый файл в app/sources/ достаточно добавить в этот список.
     """
-    from app.sources import jobboards, rss, telegram, upwork  # noqa: F401
+    from app.sources import jobboards, rss, scrapy_websites, telegram, upwork  # noqa: F401
 
     log.debug("Зарегистрированы источники: %s", known_keys())
