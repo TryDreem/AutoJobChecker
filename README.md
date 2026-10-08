@@ -191,8 +191,8 @@ local virtual environments, or IDE settings.
 
 ## Tech Stack
 
-Python 3.11, aiogram 3, Telethon, SQLAlchemy 2, APScheduler, httpx, feedparser,
-Pydantic Settings, SQLite, and Groq SDK.
+Python 3.11, aiogram 3, Telethon, Scrapy, SQLAlchemy 2, APScheduler, httpx,
+feedparser, Pydantic Settings, SQLite, and Groq SDK.
 
 ## Status
 
